@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> 
+</head>
+
+<body>
+    <div id = "one">
+        <h1>Random Word (Attempt #{{attempt_count}})</h1>
+    </div>
+    <div id = "two">
+        <h1>{{random_word}}</h1>
+    </div>
+    <form action="/random_word">
+        <input type="submit" value="Generate"/>
+    </form>
+    <form action="/random_word/reset">
+        <input type="submit" value="Reset"/>
+    </form>
+
+</body>
+
+</html>
